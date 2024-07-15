@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //Creating  object with class
+    // class Student {
+    //   constructor() {
+    //     document.write('This is from constructor <br/>');
+    //   }
+    //   printDetails() {
+    //     document.write('Thsi is from printDetils ');
+    //   }
+    // }
+    // let student1 = new Student();
+    // let student2 = new Student();
+    // student2.printDetails();
+
+    //example2
+    class Employe {
+      constructor(eno, ename, email, job) {
+        this.empno = eno;
+        this.empname = ename;
+        this.email = email;
+        this.job = job;
+      }
+      emplyeNum() {
+        document.write('empno is:' + this.empno + '<br>');
+        document.write('emp name is:' + this.empname + '<br>');
+        document.write('email id is:' + this.email + '<br>');
+        document.write('job is is:' + this.job + '<br>');
+        document.write('<br> <br>');
+      }
+    }
+    let employee2 = new Employe(101, 'Manikanta', 'sri@gmail.com', 'Developer');
+    console.log(employee2);
+    document.write(employee2);
+    employee2.emplyeNum();
+    let employee3 = new Employe(102, 'Raviteja', 'Ravi@gmail.com', 'Tester');
+    employee3.emplyeNum();
+    document.write(employee3);
+  </script>
+</html>

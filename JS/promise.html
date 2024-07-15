@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let p = new Promise(function (resolve, reject) {
+      let result = false;
+      if (result == true) {
+        return resolve('Manikanta');
+      } else {
+        return reject('stranger');
+      }
+    });
+    console.log(p);
+    p.then(function (n) {
+      console.log('Promise is fulfilled by', n);
+    });
+    p.catch(function (n) {
+      console.log('Promise is fulfilled by', n);
+    });
+  </script>
+</html>

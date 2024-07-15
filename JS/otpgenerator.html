@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="otpNum" onclick="otpGene()">Send Otp</button>
+    <br />
+    <label for="">Enter OTP</label><input type="text" name="" id="txtOtp" />
+    <br />
+    <button onclick="verifyOtp()">verifyOtp</button>
+  </body>
+  <script>
+    function otpGene() {
+      let ran = Math.random();
+      ran = ran * 10000;
+      //   console.log(ran);
+      let otp = Math.floor(ran);
+      //   console.log(otp);
+      //   let title = document.createElement('h2');
+      //   title.innerHTML = otp;
+      //   document.body.appendChild(title);
+      localStorage.setItem('myOtp', otp);
+
+      //   document.getElementById('otpNum').innerHTML = otp;
+    }
+    function verifyOtp() {
+      let typedOtp = Number(document.getElementById('txtOtp').value);
+      console.log(typeof typedOtp);
+      console.log(typedOtp);
+      let otp;
+      let getOtp = localStorage.getItem('myOtp', otp);
+      console.log(Number(otp));
+      if (typedOtp == otp) {
+        alert('Otp Verifyed');
+      } else {
+        alert('Otp Not Verifyed');
+      }
+    }
+  </script>
+</html>

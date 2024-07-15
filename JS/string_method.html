@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>String Methods</h1>
+  </body>
+  <script>
+    const str = 'Manikanta';
+    // Printing uppercase
+    console.log(str.toUpperCase());
+    // converting to lowercase
+    console.log(str.toLowerCase());
+    // concate adding to strings
+    const str2 = 'subbarao';
+    console.log(str.concat(str2));
+
+    // substring method
+
+    // substring function returns a part of string
+    //substring function takes two parameters
+    // first parameter is starting index and second parameter is ending index
+    // it never  includes ending paramers
+    // it always takes staring index which is less than ending index
+    // it interchanges the vlues if second parameter is smaller than first parameter
+
+    console.log(str.substring(3));
+    console.log(str.substring(3, 6));
+    console.log(str.substring(0, 6));
+    console.log(str.substring(6, 3));
+
+    // substr method
+
+    // substring function returns a part of string
+    //substring function takes two parameters
+    // first parameter is starting index and second parameter is length
+    console.log(str.substr(0));
+    console.log(str.substr(3));
+    console.log(str.substr(0, 4));
+    console.log(str.substr(0, 6));
+    console.log(str.substr(6, 3));
+
+    // slice method
+
+    // substring function returns a part of string
+    //substring function takes two parameters
+    // first parameter is starting index and second parameter is ending index
+    // it never  includes ending paramers
+    // it always takes staring index which is less than ending index
+    // it never interchanges the vlues if second parameter is smaller than first parameter
+    console.log(str.slice(0));
+    console.log(str.slice(3));
+    console.log(str.slice(3, 6));
+    console.log(str.slice(0, 6));
+    console.log(str.slice(6, 3));
+  </script>
+</html>

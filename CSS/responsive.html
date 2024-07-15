@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      body {
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: bold;
+        background-color: aquamarine;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      @media (min-width: 1000px) {
+        body {
+          background-color: red;
+        }
+      }
+      @media (min-width: 9000px) {
+        body {
+          background-color: aquamarine;
+        }
+      }
+      @media (max-width: 600px) {
+        body {
+          background-color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="container">Hello User...</div>
+    </div>
+  </body>
+</html>

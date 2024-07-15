@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    input
+  </body>
+  <script>
+    // Using fetch Api
+
+    // let result = fetch('data.txt');
+    // console.log(result);
+    // result.catch(function (res) {
+    //   res.text().then(function (ans) {
+    //     console.log(ans);
+    //   });
+    // });
+
+    // using async and await
+    async function test() {
+      let result = await fetch('data.txt');
+      let res = await result.then();
+      console.log(res);
+    }
+  </script>
+</html>

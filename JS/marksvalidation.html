@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body style="background-color: aqua">
+    <center>
+      <label for="">Enter Subject1 marks:<span>*</span> </label
+      ><input type="text" name="" id="sub1" /> <span id="errorsub1"></span
+      ><br /><br />
+      <label for="">Enter Subject2 marks:<span>*</span> </label
+      ><input type="text" name="" id="sub2" /><span id="errorsub2"></span
+      ><br /><br />
+      <label for="">Enter Subject3 marks: <span>*</span></label
+      ><input type="text" name="" id="sub3" /><span id="errorsub3"></span
+      ><br /><br />
+      <button onclick="getCalculation()">Submit</button><br /><br />
+      <label id="labTotal"></label><br /><br />
+      Average is:<input type="text" name="" id="texAvg" readonly />
+      <!--readonly property is help in input form that it can read but not able change the value-->
+    </center>
+  </body>
+  <script>
+    const sub11 = document.getElementById('errorsub1');
+    function getCalculation() {
+      let sub1, sub2, sub3, total, avg, grade;
+
+      // Sub1 validation
+      sub1 = Number(document.getElementById('sub1').value);
+      if (sub1 == undefined || sub1 == null || sub1 == ' ') {
+        sub11.innerHTML = 'subject1 marks require';
+        return;
+      } else {
+        if (sub1 < 0 || sub1 > 100) {
+          sub11.innerHTML = 'Invalid marks';
+          return;
+        } else {
+          document.getElementById('errorsub1').innerHTML = '';
+        }
+      }
+
+      // sub2 validation
+      sub2 = Number(document.getElementById('sub2').value);
+      if (sub2 == undefined || sub2 == null || sub2 == ' ') {
+        document.getElementById('errorsub2').innerHTML =
+          'subject2 marks require';
+        return;
+      } else {
+        document.getElementById('errorsub2').innerHTML = '';
+        if (sub2 < 0 || sub2 > 100) {
+          document.getElementById('errorsub2').innerHTML = 'Invalid marks';
+          return;
+        } else {
+          document.getElementById('errorsub2').innerHTML = '';
+        }
+      }
+
+      // sub3 validation
+      sub3 = Number(document.getElementById('sub3').value);
+      if (sub3 == undefined || sub3 == null || sub3 == ' ') {
+        document.getElementById('errorsub3').innerHTML =
+          'subject3 marks require';
+        return;
+      } else {
+        document.getElementById('errorsub3').innerHTML = '';
+        if (sub3 < 0 || sub3 > 100) {
+          document.getElementById('errorsub3').innerHTML = 'Invalid marks';
+          return;
+        } else {
+          document.getElementById('errorsub3').innerHTML = '';
+        }
+      }
+      total = sub1 + sub2 + sub3;
+      avg = total / 3;
+      document.getElementById('labTotal').innerHTML = 'Total is:' + total;
+      document.getElementById('texAvg').value = avg;
+    }
+  </script>
+</html>

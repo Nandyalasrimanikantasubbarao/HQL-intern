@@ -1,0 +1,10 @@
+p {
+  display: inline-block;
+}
+
+#one {
+  border: 5px solid;
+  border-color: #141010;
+  font-weight: bold;
+  font-variant: ;
+}
